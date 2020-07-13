@@ -29,30 +29,30 @@ else:
 
 
 # Another prototype
+   word = "naresh"
+turns = 5
+
+while turns > 0:
+    output = input("\nenter the guess: ")
     for char in word:
-        if char in guess:
+        if char in output:
             print(char, end= " ")
+            temp = char
+
         else:
             print("_", end= " ")
+
     turns = turns - 1
-    if guess == word:
-            print("\nYOU WON!!")
-            break
+    if output == word:
+        print("\nyou won")
+
+
+        break
     else:
+        print("\ntry again")
+    print("\n", temp)
 
-word = "secret"
-guess = input("ENTER YOUR GUESSES: ")
-turns = 5
-while turns > 0:
-        guess = input("\nENTER YOUR GUESSES: ")
-
-
-if guess != word:
-    print("you lost!! game over")
-else:
-    pass
-
-
+print("you lose the game")
 
 
 
